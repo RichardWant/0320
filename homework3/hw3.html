@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="number" id="myscore" value=60>
+	<br>
+
+<button type="button" onclick="document.getElementById('result1').innerHTML = score()">
+how about your score?</button>
+
+<script>
+
+	function score(){
+		var t;
+		x=document.getElementById("myscore").value;
+		if(x>=60)
+			t="great";
+		else 
+			t="bad";
+		return t;
+	}
+
+</script>
+
+<p id = result1></p>
+
+</body>
+</html>
