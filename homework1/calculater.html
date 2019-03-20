@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input type="number" id="mydata1" value=9>
+
+<input type="number" id="mydata2" value=6>
+
+<br>
+
+<button type="button"
+onclick="document.getElementById('result1').innerHTML = add()">
++</button>
+<button type="button"
+onclick="document.getElementById('result1').innerHTML = sub()">
+-</button>
+<button type="button"
+onclick="document.getElementById('result1').innerHTML = mul()">
+*</button>
+<button type="button"
+onclick="document.getElementById('result1').innerHTML = div()">
+/</button>
+<button type="button"
+onclick="document.getElementById('result1').innerHTML = cl()">
+clear</button>
+
+<script>
+	function add (){
+		var x,y;
+		x=parseFloat(document.getElementById("mydata1").value);
+	    y=parseFloat(document.getElementById("mydata2").value);
+        return x+y;
+	}
+	function sub (){
+		var x,y;
+		x=document.getElementById("mydata1").value;
+	    y=document.getElementById("mydata2").value;
+        return x-y;
+	}
+	function mul (){
+		var x,y;
+		x=document.getElementById("mydata1").value;
+	    y=document.getElementById("mydata2").value;
+        return x*y;
+	}
+	function div (){
+		var x,y;
+		x=document.getElementById("mydata1").value;
+	    y=document.getElementById("mydata2").value;
+        return x/y;
+	}
+	function cl (){
+		var x,y;
+		x=document.getElementById("mydata1").value=0;
+	    y=document.getElementById("mydata2").value=0;
+	    return " ";
+	}
+
+</script>
+
+<p id=result1></p>
+
+</body>
+</html>
