@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bouns</title>
+</head>
+<body onload="init()">
+
+<input type="number" id="myscore" value=0>
+	
+<br>
+<canvas id="myCanvas" width="500" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script language="JavaScript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var s=0;
+var i;
+ctx.fillStyle = "red";
+
+function rect(){
+
+ctx.clearRect(0,0,500,100);
+move();
+ctx.fillRect(0, 25, s , 50);
+
+}
+
+function move(){
+	var score=document.getElementById("myscore").value;
+    var ratio=score*myCanvas.width/100;
+	if(s<ratio)
+		s++
+	else if(s>ratio)
+		s--
+}
+
+function init(){
+	setInterval(rect,10);
+}
+
+
+</script>
+
+</body>
+</html>
